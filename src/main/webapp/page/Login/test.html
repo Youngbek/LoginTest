@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child my-message="Hello"></child>
+    </div>
+
+</body>
+    <script>
+
+        var vm=new Vue({
+            el:'#app',
+
+        })
+        Vue.component('child',{
+            props:['myMessage'],
+            template:'<span>{{myMessage}}</span>'
+        })
+    </script>
+</html>
