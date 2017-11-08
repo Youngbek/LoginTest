@@ -1,0 +1,48 @@
+<div style="margin-left: 350px; ;width:calc(100%- 200px);float: left;">
+    <h1>申请正式License</h1>
+    <el-form :model="form" label-width="80px" ref="form" id="applyPermanentForm">
+        <el-form-item label="姓名：">
+            <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="单位：">
+            <el-input v-model="form.organization"></el-input>
+        </el-form-item>
+        <el-form-item label="邮箱：">
+            <el-input v-model="form.email"></el-input>
+        </el-form-item>
+        <el-form-item label="电话：">
+            <el-input v-model="form.phoneNumber"></el-input>
+        </el-form-item>
+        <el-form-item label="留言：" >
+
+            <el-input type="textarea" :rows="3" placeholder="" v-model="form.textarea"></el-input>
+        </el-form-item>
+        <!--上传绑定license的hostId文件-->
+        <el-form-item>
+            <el-upload
+                    class="upload-demo"
+                    ref="upload"
+                    action="/file/upload"
+                    :on-preview="handlePreview"
+                    :on-remove="handleRemove"
+                    :file-list="fileList"
+                    :auto-upload="false">
+                <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传</el-button>
+                <div slot="tip" class="el-upload__tip">上传部署机器的序列号文件serial.txt</div>
+            </el-upload>
+            </el-upload>
+        </el-form-item>
+
+
+        <el-form-item >
+            <el-button type="primary" icon="el-icon-edit" @click="_next">生成License文件</el-button>
+        </el-form-item>
+        <!--<el-form-item>-->
+        <!--<a href="/upload/license.lic" download="license.lic"style="color: -webkit-link;">-->
+        <!--<el-button type="primary">License下载</el-button>-->
+        <!--</a>-->
+
+        <!--</el-form-item>-->
+    </el-form>
+</div>

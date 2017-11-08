@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ljdy.login</groupId>
+  <groupId>com.ljdy</groupId>
   <artifactId>LoginTest</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -37,8 +37,9 @@
     <dependency>
       <groupId>com.jfinal</groupId>
       <artifactId>jfinal</artifactId>
-      <version>3.0</version>
+      <version>3.2</version>
     </dependency>
+
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
@@ -47,16 +48,76 @@
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
+      <version>1.2.16</version>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.20</version>
     </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20160810</version>
+    </dependency>
+    <dependency>
+      <groupId>org.ujmp</groupId>
+      <artifactId>ujmp-core</artifactId>
+      <version>0.3.0</version>
+    </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.osgeo</groupId>
+      <artifactId>proj4j</artifactId>
+      <version>0.1.0</version>
+    </dependency>
 
-
+      <!--<dependency>-->
+          <!--<groupId>de.schlichtherle.truelicense</groupId>-->
+          <!--<artifactId>truelicense-core</artifactId>-->
+          <!--<version>1.33</version>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+          <!--<groupId>de.schlichtherle.truelicense</groupId>-->
+          <!--<artifactId>truelicense-xml</artifactId>-->
+          <!--<version>1.33</version>-->
+      <!--</dependency>-->
+      <dependency>
+          <groupId>commons-codec</groupId>
+          <artifactId>commons-codec</artifactId>
+          <version>1.10</version>
+      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>de.schlichtherle.truelicense</groupId>-->
+          <!--<artifactId>truelicense-swing</artifactId>-->
+          <!--<version>1.33</version>-->
+      <!--</dependency>-->
+    <dependency>
+      <groupId>it.sauronsoftware.cron4j</groupId>
+      <artifactId>cron4j</artifactId>
+      <version>2.2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.dblock</groupId>
+      <artifactId>oshi-core</artifactId>
+      <version>LATEST</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>cos</artifactId>
+      <version>26Dec2008</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>LoginTest</finalName>

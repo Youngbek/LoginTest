@@ -5,21 +5,26 @@
     <title>Title</title>
     <script src="../../js/vue.min.js"></script>
 </head>
+
 <body>
-    <div id="app">
-        <child my-message="Hello"></child>
+<div id="home">
+    <div id="header" style="height: 80px;width: 100%;background-color: #016FCB">
+        <img src="img/logo.ico" style="float: left;">
+        <label style="">二维地图开放服务</label>
+        <el-menu>
+
+        </el-menu>
+
+        <div>
+            <span>
+                <label><i class="iconfont">&#xe676;</i>&nbsp;&nbsp;欢迎您！{{username}}&nbsp;&nbsp;|&nbsp;&nbsp;</label>
+                <el-button @click="quit" type="text">退出</el-button>
+            </span>
+        </div>
     </div>
 
+</div>
 </body>
-    <script>
 
-        var vm=new Vue({
-            el:'#app',
 
-        })
-        Vue.component('child',{
-            props:['myMessage'],
-            template:'<span>{{myMessage}}</span>'
-        })
-    </script>
 </html>

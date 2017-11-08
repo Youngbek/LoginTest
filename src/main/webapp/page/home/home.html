@@ -1,0 +1,49 @@
+<div id="home">
+    <header>
+        <img class="logo" src="/img/logo.ico">
+        <label id="head" >珞珈德毅授权管理系统</label>
+        <span >
+            <!--<label><i class="iconfont">&#xe676;</i>&nbsp;&nbsp;{{username}}&nbsp;&nbsp; |&nbsp;&nbsp;</label>-->
+            <el-button type="text" @click="dialogFormVisible = true">管理员登录</el-button>
+            <el-dialog title="管理员登录" :visible.sync="dialogFormVisible">
+                <el-form v-model="form">
+                    <el-form-item label="账号：" :label-width="formLabelWidth">
+                        <el-input v-model="form.username" auto-complete="off"placeholder="请输入管理员账号"></el-input>
+                    </el-form-item>
+                    <el-form-item label="密码：" :label-width="formLabelWidth">
+                        <el-input v-model="form.password" auto-complete="off"placeholder="请输入管理员密码"></el-input>
+                    </el-form-item>
+                </el-form>
+              <div slot="footer" class="dialog-footer">
+                <el-button @click="dialogFormVisible = false">取 消</el-button>
+                <el-button type="primary" @click="adminLogin">确 定</el-button>
+              </div>
+        </el-dialog>
+        </span>
+    </header>
+    <div>
+        <el-row class="tac">
+            <el-col :span="4">
+                <aside>
+                    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="light"
+                    router="true">
+                        <el-menu-item index="1">主页</el-menu-item>
+                        <el-submenu index="2">
+                            <template slot="title">申请 License</template>
+                            <el-menu-item-group title="License 类型" >
+                                <el-menu-item index="/home/trial">试用 License</el-menu-item>
+                                <el-menu-item index="/home/permanent">永久 License</el-menu-item>
+                            </el-menu-item-group>
+                        </el-submenu>
+                        <el-menu-item index="3">咨询求助</el-menu-item>
+                    </el-menu>
+                </aside>
+            </el-col>
+
+            <div id="mainContent">
+                <router-view></router-view>
+            </div>
+        </el-row>
+    </div>
+    <footer></footer>
+</div>

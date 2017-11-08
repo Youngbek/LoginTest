@@ -1,0 +1,19 @@
+<div id="home">
+    <header>
+        <img class="logo" src="/img/logo.ico">
+        <label id="head" >珞珈德毅授权管理系统</label>
+        <el-menu id="adminNav" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" router="true">
+            <el-menu-item index="/admin/configure">License配置信息管理</el-menu-item>
+            <el-menu-item index="2">License发送查看</el-menu-item>
+        </el-menu>
+        <span id="logout" >
+            <!--<label><i class="iconfont">&#xe676;</i>&nbsp;&nbsp;{{username}}&nbsp;&nbsp; |&nbsp;&nbsp;</label>-->
+            <el-button type="text" @click="_logout">退出管理员页面</el-button>
+
+        </span>
+    </header>
+    <div>
+        <router-view></router-view>
+    </div>
+    <footer></footer>
+</div>

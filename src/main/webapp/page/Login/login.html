@@ -1,9 +1,37 @@
 <div id="login_page" >
     <div id="top_div">
-        <img src="/img/ljdylogo.png" draggable="false" style="">
+        <div style="float:left ">
+            <img src="/img/ljdylogo.png" draggable="false" style="float:left;margin-left: 60px;margin-top:20px;width:40px">
+            <div style="float:left; font-size: 17px;margin-top: 19px; margin-left: 15px;color: white">
+                <span><b>珞珈德毅</b> 二维地图开放服务</span><br>
+                <a href="http://www.luojiadeyi.com" style="color:#d9d4dc;text-decoration:none;font-family: Arial">http://www.luojiadeyi.com</a>
+            </div>
+        </div>
+        <div style="float:right;color: white;font-size: 20px; margin-top: 20px;position: absolute;right: 160px;">
+            <span><el-button type="text">中文</el-button>|<el-button type="text" style="color: white;">English</el-button></span>
+        </div>
     </div>
 
-    <div id="login_container" @keyup.enter="_login">
+    <div  @keyup.enter="_login" style="margin: 13% auto 0 auto;text-align: center;">
+        <h1 style="font-size: 300%;font-family: 'Microsoft YaHei','Microsoft JhengHei',STHeiti,MingLiu;text-align: center;color: white;" >二维地图开放服务</h1>
+        <form id="login_form" method="post" role="form" style="margin: 13% auto 0 auto;text-align: center;position:relative;width:305px;">
+            <div style="margin-top: 50px;">
+                <input type="text" placeholder="用户名" maxlength="11" v-model="name" class="login_input">
+                <img src="/img/user.png" draggable="false" style="width: 30px;float: left;position: relative; bottom: 37px;margin-left: 20px;">
+            </div>
+            <div style="margin-top: 20px;">
+                <input type="password" placeholder="密码" maxlength="11" v-model="password" class="login_input">
+                <img src="/img/password.png" draggable="false" style="width: 30px;float: left;position: relative; bottom: 37px;margin-left: 20px;">
+            </div>
+            <button id="bbt" type="button" @click="_login">登&nbsp;&nbsp;录</button>
+            <div id="errorMsg" class="connect" style="display:none">
+                <label class="error"></label>
+            </div>
 
+        </form>
+
+    </div>
+    <div style="text-align: center;position: absolute;bottom: 25px;width: 100%;color: white;"  >
+        &copy;&nbsp;珞珈德毅科技（天门）有限公司
     </div>
 </div>
